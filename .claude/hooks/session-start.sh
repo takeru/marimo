@@ -6,6 +6,9 @@ if [ "${CLAUDE_CODE_REMOTE:-}" != "true" ]; then
   exit 0
 fi
 
+# Enable async mode with 5-minute timeout
+echo '{"async": true, "asyncTimeout": 300000}'
+
 echo "🚀 Setting up marimo development environment..."
 
 # Create virtual environment if it doesn't exist
